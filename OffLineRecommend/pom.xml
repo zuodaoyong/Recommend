@@ -32,6 +32,10 @@
             <groupId>org.apache.spark</groupId>
             <artifactId>spark-graphx_2.12</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.scalanlp</groupId>
+            <artifactId>jblas</artifactId>
+        </dependency>
     </dependencies>
 
 </project>
