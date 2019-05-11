@@ -10,6 +10,7 @@
     <modules>
         <module>DataLoader</module>
         <module>OffLineRecommend</module>
+        <module>StatisticalRecommend</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -18,6 +19,8 @@
         <scala.version>2.12.6</scala.version>
         <log4j.version>1.2.17</log4j.version>
         <slf4j.version>1.7.22</slf4j.version>
+        <mongodb-spark.version>2.4.0</mongodb-spark.version>
+        <casbah.version>3.1.1</casbah.version>
     </properties>
     <dependencies>
         <!-- 所有子项目的日志框架 -->
@@ -87,6 +90,16 @@
                 <version>${spark.version}</version>
                 <!-- provider如果存在，那么运行时该Jar包不存在，也不会打包到最终的发布版本中，只是编译器有效 -->
                 <!--<scope>provided</scope>-->
+            </dependency>
+            <dependency>
+                <groupId>org.mongodb.spark</groupId>
+                <artifactId>mongo-spark-connector_2.12</artifactId>
+                <version>${mongodb-spark.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mongodb</groupId>
+                <artifactId>casbah-core_2.12</artifactId>
+                <version>${casbah.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

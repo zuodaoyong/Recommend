@@ -1,3 +1,5 @@
+package com.dataloader.film
+
 import org.apache.spark.SparkConf
 import org.apache.spark.sql.SparkSession
 
@@ -19,7 +21,6 @@ object DataLoder{
     //创建sparkConf
     val sparkConf=new SparkConf().setAppName(DataLoder.getClass.getSimpleName).setMaster(config.get("spark.cores").get)
     val sparkSession=SparkSession.builder().config(sparkConf).getOrCreate()
-    import sparkSession.implicits. _
     //加载数据
     var movieRDD=sparkSession.sparkContext.textFile(MOVIE_DATA_PATH)
     println(movieRDD.first())
