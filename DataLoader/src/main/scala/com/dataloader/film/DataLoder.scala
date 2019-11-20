@@ -9,9 +9,9 @@ case class Movie(val mid: Int, val name: String, val descri: String, val timelon
 case class Rating(var uid:Int,var mid:Int,var score:Double,var timestamp:Int)
 case class Tag(var uid:Int,var mid:Int,var tag:String,var timestamp:Int)
 object DataLoder{
-  val MOVIE_DATA_PATH = "F:\\git\\Recommend\\DataLoader\\src\\main\\resources\\movies.csv"
-  val RATING_DATA_PATH = "F:\\git\\Recommend\\DataLoader\\src\\main\\resources\\ratings.csv"
-  val TAG_DATA_PATH = "F:\\git\\Recommend\\DataLoader\\src\\main\\resources\\tags.csv"
+  val MOVIE_DATA_PATH = "F:\\git\\Recommend\\DataLoader2\\src\\main\\resources\\movies.csv"
+  val RATING_DATA_PATH = "F:\\git\\Recommend\\DataLoader2\\src\\main\\resources\\ratings.csv"
+  val TAG_DATA_PATH = "F:\\git\\Recommend\\DataLoader2\\src\\main\\resources\\tags.csv"
 
   def main(args:Array[String]): Unit ={
 

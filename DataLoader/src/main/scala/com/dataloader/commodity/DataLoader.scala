@@ -27,8 +27,8 @@ case class Rating( userId: Int, productId: Int, score: Double, timestamp: Int )
 case class MongoConfig( uri:String,db:String)
 object DataLoader {
   // 定义数据文件路径
-  val PRODUCT_DATA_PATH = "D:\\software\\project\\Recommend\\DataLoader\\src\\main\\resources\\commodity\\products.csv"
-  val RATING_DATA_PATH = "D:\\software\\project\\Recommend\\DataLoader\\src\\main\\resources\\commodity\\ratings.csv"
+  val PRODUCT_DATA_PATH = "D:\\project\\Recommend\\DataLoader\\src\\main\\resources\\commodity\\products.csv"
+  val RATING_DATA_PATH = "D:\\project\\Recommend\\DataLoader\\src\\main\\resources\\commodity\\ratings.csv"
   // 定义mongodb中存储的表名
   val MONGODB_PRODUCT_COLLECTION = "Product"
   val MONGODB_RATING_COLLECTION = "Rating"
@@ -40,7 +40,7 @@ object DataLoader {
       "mongo.db" -> "commodityRecommender"
     )
     // 创建一个spark config
-    val sparkConf =new SparkConf().setMaster(config("spark.cores")).setAppName(DataLoader.getClass.getSimpleName)
+    val sparkConf =new SparkConf().setMaster(config("spark.cores")).setAppName(DataLoader2.getClass.getSimpleName)
     // 创建spark session
     val sparkSession=SparkSession.builder().config(sparkConf).getOrCreate()
     import sparkSession.implicits._
